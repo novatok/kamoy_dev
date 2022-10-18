@@ -1,0 +1,373 @@
+@import url('https://fonts.googleapis.com/css2?family=Acme&family=Cormorant+SC:wght@400;700&family=Noto+Sans&display=swap');
+
+@import "colors";
+
+body, html, * {
+    margin: 0;
+    padding: 0%;
+}
+
+// Declare variables for each section
+$section-height : fit-content;
+$sect-minHeight : 100vh;
+$section-padding : 25%;
+$h2-size : 2.5em;
+$p-size : 1.2em;
+
+@mixin section-style($bg-color) {
+    height: $section-height;
+    padding-top: $section-padding;
+    padding-bottom: 15%;
+    background-color: $bg-color;
+    min-height: $sect-minHeight;
+    background-attachment: fixed;
+
+    h2 {
+        font-size: $h2-size;
+        padding: 20px;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    }
+    p, li, quotes {
+        padding: 5px 15px;
+        font-size: $p-size;
+    }
+}
+
+body {
+    // background-color: $Yellow;
+    background-image: url(../images/SVG/Clarence.svg);
+    background-repeat: no-repeat;
+    background-position: right-top;
+    background-attachment: fixed;
+    max-width: 100vw;    
+}
+
+#hiddenMenu {
+    p {
+        display: none;
+    }
+}
+
+.navScroll {
+    // background-color: $LightGrey;
+    background-image: url(../images/SVG/Clarence.svg);
+    background-repeat: no-repeat;
+    background-position: right-top;
+}
+
+#main-container {
+    position: relative;
+    text-align: center;
+
+    // #sub-container {
+    //     scroll-snap-type: y mandatory;
+    //     overflow-y: scroll;
+    //     height: $sect-minHeight;
+
+    //     section {
+    //         scroll-snap-align: start;
+    //     }
+
+    // }
+    
+    aside {
+        width: 100vw;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: 0;
+        box-shadow: inset;
+        z-index: -1;
+        display: none;
+    }
+}
+
+
+#Hero {  
+    @include section-style(transparent); 
+
+    h1 {
+        font-size: 4.5em;
+        font-family: 'Acme', sans-serif;
+        font-weight: 700;
+        color: #000;
+    }
+
+    h3 {
+        font-size: 2em;
+        padding: 30px 5px;
+    }
+
+    button {
+        background: $AnotherPink;
+        color: #000;
+        font-size: 1.5em;
+        border: $Yellow;
+        border-radius: 50px;
+        width: 50%;
+        height: 55px;
+        margin-top: 57px;
+        box-shadow: 1px 1px 5px; 
+    }
+
+}
+
+#About {
+    @include section-style($White);
+    
+    a {
+        text-decoration: none;
+        color: rgb(176, 14, 14);
+    }
+
+    a:hover {
+        color: #faebd7;
+
+    }
+}
+
+#Projects {
+    @include section-style($LightGrey);
+    height: fit-content;
+    min-height: 100vh;
+
+    .myCard {
+        background-color: rgba(0, 0, 0, 0.1);
+        border-radius: 25px;
+        margin: 15% 5%;
+        padding: 0 0% 10% 0%;
+        box-shadow: 2px 2px 15px;
+
+        .work-img {
+            border-radius: 25px 25px 0 0;
+        }
+
+        .work-title {
+            padding-top: 10%;
+            font-size: 1.5em;
+            font-weight: 500;
+        }
+
+        .btn {
+            background-color: $Lavender;
+            border: $Lavender;
+            color: #000;
+            font-size: 1.3em;
+            border-radius: 25px;
+            width: 60%;
+            height: 40px;
+            margin-top: 10%px;
+        }
+    }
+}
+
+#Skills {
+    @include section-style($White);
+    position: relative;
+
+    .skillCard {
+        background-color: rgba(0, 0, 0, 0.1);
+        border-radius: 25px;
+        margin: 15% 5%;
+        padding: 0 0% 10% 0%;
+        box-shadow: 2px 2px 15px;
+
+        h5 {
+            padding: 5% 0;
+            font-size: 1.5em;
+            border-radius: 25px 25px 0 0;
+            background-color: $Green;
+        }
+
+        li {
+            list-style: none;
+        }
+
+    }
+
+    #watermarkbox {
+        display: none;
+        // position: absolute;
+        // bottom: 10%;
+        // margin-bottom:100%;
+        // margin-left: 0%;
+
+        // .watermark {
+        //     font-size: 7em;
+        //     opacity: 0.1;
+        //     writing-mode: vertical-rl;
+        //     text-orientation: sideways-right;
+        //     transform: rotate(180deg);
+            
+        // }
+        // .watermark2 {
+        //     position: absolute;
+        //     font-size: 7em;
+        //     opacity: 0.1;
+        //     writing-mode: vertical-rl;
+        //     text-orientation: sideways-right;
+        //     transform: rotate(180deg);
+        // }
+    }
+}
+
+#Contact {
+    @include section-style($LightGrey);
+
+    .contact-info{
+        display: flex;
+        flex-wrap: wrap;
+
+        .contact-details {
+            color: $Yellow;
+            background-color: rgba(255, 255%, 255%, 0.08);
+            // border-radius: 50%;
+            width: 100%;
+            height: 100%;
+            margin-top: 5%;
+            padding: 5% 0;
+
+            a {
+                text-decoration: none;
+                color: #000;
+            }
+
+            i {
+                font-size: 3em;
+            }
+        }
+
+        .contact-details:focus, .contact-details:active {
+            background-color: rgba(255, 255%, 255%, 0.5);
+        }
+
+        .social {
+            display: flex;
+            justify-content: center;
+
+            i {
+            font-size: 1.9em;
+            }
+        }
+    }
+    
+}
+
+#toTopBtn {
+    position: fixed;
+    bottom: 20%;
+    right: 5%;
+    display: none;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 99;
+}
+
+.show {
+    display: block;
+}
+
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+// @media only screen and (min-width: 600px) {...}
+
+/* Medium devices (landscape tablets, 768px and up) */
+// @media only screen and (min-width: 768px) {...}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    header {
+        font-size: 1.3em;
+        .hide-lg {
+            display: none;
+        }
+
+        #hiddenMenu {
+            margin: 0 -2% 0 5% ;
+            background-color: $BlueGreen;
+            padding: 0 5% 0 2%;
+            li {
+                display: none;
+            }
+
+            p {
+                display: inline-block;
+            }
+        }
+
+        #hiddenMenu:hover {
+            li {
+                display: inline;
+            }
+
+            p {
+                display: none;
+            }
+        }
+    }
+
+    $section-padding-lg: 10%;
+
+    @mixin lg-section-style {
+        padding-top: $section-padding-lg;
+    }
+
+
+    #Hero {
+        @include lg-section-style();
+
+        button {
+            background: $Lime;
+            color: #000;
+            font-size: 1.5em;
+            border: $Lime;
+            border-radius: 50px;
+            width: 20%;
+            height: 55px;
+            margin-top: 60px;
+            box-shadow: 1px 1px 10px; 
+        }
+    }
+
+    #About{
+        @include lg-section-style();
+
+        p {
+            padding: 0 10%;
+        }
+    } 
+    
+    #Projects{
+        @include lg-section-style();
+    } 
+    
+    #Skills{
+        @include lg-section-style();
+
+        #skillsBox {
+            display: flex;
+            justify-content: center;
+            align-content: flex-start;
+
+            .skillCard {
+                border-radius: 25px;
+                margin: 0;
+                width: 30%;
+            }
+        } 
+
+    }
+    
+    #Contact{
+        @include lg-section-style();
+    }
+
+    
+
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+// @media only screen and (min-width: 1200px) {...}
+
+
+

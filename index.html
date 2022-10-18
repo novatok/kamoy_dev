@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello Kamoy</title>
+    <link rel="icon" type="image/x-icon" href="./assets/images/Logo.png">
+    <link rel="stylesheet" href="./assets/css/bootstrap.css">
+    <link rel="stylesheet" href="./assets/css/animate.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+    <header>
+        <nav id="menubar" class="navbar navbar-expand-lg fixed-top">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index.html"><img src="./assets/images/Logo.png" alt="Logo" height="60px" class="rounded-pill"> Kamoy Saunders</a>
+                <button type="button" class="navbar-toggler navbar-toggler-right" data-bs-target="#myNavLinks" data-bs-toggle="offcanvas" aria-controls="myNavLinks" aria-label="Toggle navigation"> <i class="fa-solid fa-bars"></i></button>
+                <div class="nav offcanvas offcanvas-end" id="myNavLinks" tabindex="-1">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title">Kamoy Saunders</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body  d-lg-flex justify-content-end">
+                        <ul class="navbar-nav list-inline">
+                            <li class="nav-item list-inline-item" data-bs-dismiss="offcanvas">
+                                <a class="nav-link" href="#Hero"><i class="fa-solid fa-house hide-lg"></i>   Home </a>
+                            </li>
+                            <li class="nav-item list-inline-item" data-bs-dismiss="offcanvas">
+                                <a class="nav-link" href="#About"> <i class="fa-solid fa-address-card hide-lg"></i> About </a>
+                            </li>
+                            <li class="nav-item list-inline-item" data-bs-dismiss="offcanvas">
+                                <a class="nav-link" href="#Projects"><i class="fa-solid fa-briefcase hide-lg"></i> Work </a>
+                            </li>
+                            <li class="nav-item list-inline-item" data-bs-dismiss="offcanvas">
+                                <a class="nav-link" href="#Skills"><i class="fa-solid fa-code hide-lg"></i> Skills </a>
+                            </li>
+                            <li class="nav-item list-inline-item" data-bs-dismiss="offcanvas">
+                                <a class="nav-link" href="#Contact" ><i class="fa-solid fa-envelope hide-lg"></i> Contact </a>
+                            </li>
+                        </ul>
+                        <ul class="navbar-nav list-inline" id="hiddenMenu">
+                            <p><i class="fa-solid fa-ellipsis"></i></p>
+                            <li class="nav-item list-inline-item" data-bs-dismiss="offcanvas">
+                                <a class="nav-link" href="https://github.com/novatok?tab=repositories"  target="_blank"> <i class="fa-brands fa-github"></i> Github</a>
+                            </li>
+                            <li class="nav-item list-inline-item" data-bs-dismiss="offcanvas">
+                                <a class="nav-link" href="https://www.linkedin.com/in/kamoysaunders/"  target="_blank"> <i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+                            </li>
+                            <li class="nav-item list-inline-item" data-bs-dismiss="offcanvas">
+                                <a class="nav-link" href="assets/images/Resume for Kamoy T Saunders.pdf"  target="_blank"><i class="fa-solid fa-download"></i> Resume</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main id="main-container" >
+
+        <aside>
+            <img src="./assets/images/pic1.jpg" alt="pic1" class="img-fluid">
+        </aside>
+
+        <div id="sub-container">
+
+            <section id="Hero">
+                <h3>
+                    &#60I build&#62
+                </h3>
+                <h1>Interactive Web Experiences</h1>
+                <a href="#About"><h3>Meet <span id="heroAnim"> the Enthusiast</span></h3></a>
+                <a href="#Projects"><button class="viewwork">See My Work <i class="fa fa-chevron-right" aria-hidden="true"></i></button></a>
+            </section>
+
+            <section id="About">
+                <img src="./assets/images/pic4.jpg" alt="Logo" height="120px" width="120px" class="rounded-pill">
+                <h2>WHO IS KAMOY?</h2>
+                <p>
+                    <i class="fa-solid fa-earth-americas"></i> &nbsp; Web developer based in Kingston, Jamaica
+                </p>
+                <p>
+                    <i class="fa-solid fa-graduation-cap"></i> &nbsp; Current student pursuing BSc in Information Technology at the University of the Commonwealth Caribbean (UCC)
+                </p>
+                <p>I am a passionate designer backed by years of customer satisfaction experience. I love to code and have knowledge of frontend/backend processes and tools. See my <a href="#Skills"> technical skills</a></p>
+                <br>
+                <h4>Interests</h4>
+                <ul class="list-inline">
+                    <li class="list-inline-item"><i class="fa-solid fa-brain"></i>&nbsp; Machine learning (ML)</li>
+                    <li class="list-inline-item"> <i class="fa-solid fa-microchip"></i>&nbsp; AI</li>
+                    <br>
+                    <li class="list-inline-item"><i class="fa-solid fa-robot"></i>&nbsp; Robotics</li>
+                    <li class="list-inline-item"><i class="fa-brands fa-aws"></i>&nbsp; AWS</li>
+                    <br>
+                    <li class="list-inline-item"><i class="fa-brands fa-microsoft"></i>&nbsp; Microsoft Azure</li>
+                </ul>
+                
+            </section>
+
+            <section id="Projects">
+                <h2>MY PROJECTS</h2>
+                <div class="myCard">
+                    <img class="work-img" style="width:100%" src="assets/images/huddle-lp.png" alt="huddle-lp">
+                    <div class="work-body">
+                        <h4 class="work-title">Huddle Landing Page</h4>
+                        <p class="work-text">This is a solution to the Huddle landing page with single introductory section challenge on Frontend Mentor. <br> Built with Semantic HTML5 markup, CSS Grid & Mobile-first workflow </p> <br>
+                        <a href="https://novatok.github.io/huddle-landing-page/" class="btn btn-primary" target="_blank">View Site</a>
+                    </div>
+                </div>
+                <div class="myCard">
+                    <img class="work-img" style="width:100%" src="assets/images/explore_jamaica.png" alt="explore_jamaica">
+                    <div class="work-body">
+                        <h4 class="work-title">Explore Jamaica</h4>
+                        <p class="work-text">Project or coursework for Internet Authoring. <br> Built with HTML and CSS</p> <br>
+                        <a href="https://novatok.github.io/explore_jamaica/" class="btn btn-primary" target="_blank">View Site</a>
+                    </div>
+                </div>
+
+                <div class="myCard">
+                    <img class="work-img " style="width:100%" src="assets/images/loginphp.png" alt="loginphp">
+                    <div class="work-body">
+                        <h4 class="work-title">Login Web System</h4>
+                        <p class="work-text">Project or coursework for Internet Authoring II. <br>Built with HTML, CSS and PHP. </p> <br>
+                        <a href="https://github.com/novatok/login_webproject" class="btn btn-primary" target="_blank">View Source Code</a>
+                    </div>
+                </div>
+
+                <div class="myCard">
+                    <img class="work-img" style="width:100%" src="assets/images/QR-component.png" alt="QR-component">
+                    <div class="work-body">
+                        <h4 class="work-title">QR-Component</h4>
+                        <p class="work-text">This is a solution to the QR code component challenge on Frontend Mentor. <br> Built with Semantic HTML5 markup, CSS & Mobile-first workflow </p> <br>
+                        <a href="https://novatok.github.io/QR-Code-Component-using-HTML-CSS/" class="btn btn-primary" target="_blank">View Site</a>
+                    </div>
+                </div>
+                <div class="myCard">
+                    <img class="work-img" style="width:100%" src="assets/images/advice-generator.png" alt="advice-generator">
+                    <div class="work-body">
+                        <h4 class="work-title">Advice Generator App</h4>
+                        <p class="work-text">This is a solution to the Advice generator app challenge on Frontend Mentor. <br> Built with Semantic HTML5 markup, CSS, Flexbox, Mobile-first workflow, Javascript & Advice Slip API </p> <br>
+                        <a href="https://novatok.github.io/advice-generator-app/" class="btn btn-primary" target="_blank">View Site</a>
+                    </div>
+                </div>
+            </section>
+
+            <section id="Skills">
+                <h2>TECHNICAL SKILLS</h2>
+                <quotes>"The future belongs to those who learn more skills and combine them in creative ways."</quotes>
+                <br>
+                <div id="skillsBox">
+                    <div class="skillCard" id="frontend">
+                        <h5>FRONTEND</h5>
+                        <ul>
+                            <li><i class="fa-brands fa-js"></i> &nbsp;  JavaScript</li>
+                            <li><i class="fa-brands fa-react"></i> &nbsp; React</li>
+                            <li><i class="fa-brands fa-bootstrap"></i> &nbsp; Bootstrap</li>
+                        </ul>
+                    </div>
+                    <div class="skillCard" id="backend">
+                        <h5>BACKEND</h5>
+                        <ul>
+                            <li><i class="fa-brands fa-php"></i> &nbsp;  PHP</li>
+                            <li><i class="fa-brands fa-python"></i> &nbsp;  Python</li>
+                            <li><i class="fa-solid fa-database"></i> &nbsp; MySQL</li>
+                        </ul>
+                    </div>
+                    <div class="skillCard" id="tools">
+                        <h5>TOOLS</h5>
+                        <ul>
+                            <li><i class="fas fa-code"></i> &nbsp; VS Code</li>
+                            <li><i class="fa-brands fa-square-git"></i> &nbsp; GIT/Github</li>
+                            <li><i class="fas fa-image"></i> &nbsp; Photoshop</li>
+                        </ul>
+                    </div>
+                </div>
+                <div id="watermarkbox">
+                    <p>
+                        <span class="watermark">	&#60HTML&#62</span>
+                        <br>
+                        <span class="watermark2">&#x7B&nbspCSS&nbsp&#x7d</span>
+                    </p>
+                </div>
+            
+            </section>
+
+            <section id="Contact">
+                <h2>Get in touch</h2>
+                <div class="contact-info">
+                    <div class="contact-details">
+                        <i class="fa fa-envelope"></i>
+                        <a href="mailto:kamoysaunders@yahoo.com">
+                            <p>kamoysaunders@yahoo.com</p>
+                        </a>
+                    </div>
+
+                    <div class="contact-details">
+                        <i class="fa fa-location-dot"></i>
+                        <a href="#">                        
+                            <p>Kingston, Jamaica</p>
+                        </a>
+                    </div>
+                    
+                    <div class="contact-details social">
+                        <a href="https://github.com/novatok?tab=repositories"  target="_blank">
+                            <i class="fa-brands fa-github"></i>  
+                            <p>Github</p>
+                        </a>
+                        
+                        <a href="https://www.linkedin.com/in/kamoysaunders/"  target="_blank"> 
+                            <i class="fa-brands fa-linkedin"></i> 
+                            <p>LinkedIn</p>
+                        </a>
+                        
+                        <a href="assets/images/Resume for Kamoy T Saunders.pdf" download target="_blank"> 
+                            <i class="fa-solid fa-download"></i>
+                            <p>Resume</p>
+                        </a>
+                    </div>
+                </div>
+                <!-- <img src="assets/images/personal_email.svg" alt="personal_email" width="400px" >  -->
+            </section>
+
+        </div>
+
+    </main>
+
+    <button type="button" id="toTopBtn">
+        <i class="fa fa-arrow-up fa-1x wow animate__swing" data-wow-delay="0.5s" data-wow-duration="2s" aria-hidden="true"></i>
+    </button>
+
+    <footer></footer>
+
+    <script src="https://kit.fontawesome.com/7fce1ef089.js" crossorigin="anonymous"></script>
+    <script src="./assets/js/events.js"></script>
+    <script src="./assets/js/wow.min.js"></script>
+        <script>
+            new WOW().init();
+        </script>
+    <script src="./assets/js/bootstrap.js "></script>
+    
+</body>
+</html>
