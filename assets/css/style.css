@@ -10,16 +10,29 @@ body {
   background-position: right-top;
   background-attachment: fixed;
   max-width: 100vw;
+  height: 100%;
 }
-
-#hiddenMenu p {
+body #scrollTopBtn {
+  position: fixed;
+  bottom: 2%;
+  right: 2%;
+  border-radius: 50%;
+  display: none;
+  cursor: pointer;
+  z-index: 99;
+  background-color: #7158d1;
+  height: 40px;
+  width: 40px;
+  font-size: 1em;
+}
+body #hiddenMenu p {
   display: none;
 }
-
-.navScroll {
+body .navScroll {
   background-image: url(../images/SVG/Clarence.svg);
   background-repeat: no-repeat;
   background-position: right-top;
+  background-attachment: fixed;
 }
 
 #main-container {
@@ -50,7 +63,7 @@ body {
 #Hero h2 {
   font-size: 2.5em;
   padding: 20px;
-  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 #Hero p, #Hero li, #Hero quotes {
   padding: 5px 15px;
@@ -65,12 +78,12 @@ body {
 #Hero h3 {
   font-size: 2em;
   padding: 30px 5px;
+  font-family: "Acme", sans-serif;
 }
 #Hero button {
   background: #f75f68;
   color: #000;
   font-size: 1.5em;
-  border: #ffd300;
   border-radius: 50px;
   width: 50%;
   height: 55px;
@@ -91,7 +104,7 @@ body {
 #About h2 {
   font-size: 2.5em;
   padding: 20px;
-  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 #About p, #About li, #About quotes {
   padding: 5px 15px;
@@ -99,10 +112,10 @@ body {
 }
 #About a {
   text-decoration: none;
-  color: rgb(176, 14, 14);
+  color: rgb(226, 15, 15);
 }
 #About a:hover {
-  color: #faebd7;
+  color: rgb(126, 6, 6);
 }
 
 #Projects {
@@ -120,7 +133,7 @@ body {
 #Projects h2 {
   font-size: 2.5em;
   padding: 20px;
-  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 #Projects p, #Projects li, #Projects quotes {
   padding: 5px 15px;
@@ -161,34 +174,77 @@ body {
   background-color: #fff;
   min-height: 100vh;
   background-attachment: fixed;
-  position: relative;
 }
 #Skills h2 {
   font-size: 2.5em;
   padding: 20px;
-  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 #Skills p, #Skills li, #Skills quotes {
   padding: 5px 15px;
   font-size: 1.2em;
 }
 #Skills .skillCard {
-  background-color: rgba(0, 0, 0, 0.1);
-  border-radius: 25px;
+  background-color: transparent;
+  border-radius: 0 0 25px 25px;
   margin: 15% 5%;
   padding: 0 0% 10% 0%;
-  box-shadow: 2px 2px 15px;
+  box-shadow: 2px 2px 10px 1px;
 }
 #Skills .skillCard h5 {
   padding: 5% 0;
   font-size: 1.5em;
-  border-radius: 25px 25px 0 0;
-  background-color: #32DBA2;
 }
-#Skills .skillCard li {
-  list-style: none;
+#Skills .skillCard p {
+  font-size: 1em;
 }
-#Skills #watermarkbox {
+#Skills .skillCard:nth-of-type(1) {
+  border-top: 15px solid #FA6672;
+}
+#Skills .skillCard:nth-of-type(1) .icons {
+  background-color: #FA6672;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  text-align: center;
+  display: block;
+  margin: 5% auto;
+  font-size: 2em;
+  color: #fff;
+  padding: auto 0;
+}
+#Skills .skillCard:nth-of-type(2) {
+  border-top: 15px solid #1daacc;
+}
+#Skills .skillCard:nth-of-type(2) .icons {
+  background-color: #1daacc;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  text-align: center;
+  display: block;
+  margin: 5% auto;
+  font-size: 2em;
+  color: #fff;
+  padding: auto 0;
+}
+#Skills .skillCard:nth-of-type(3) {
+  border-top: 15px solid #7158d1;
+}
+#Skills .skillCard:nth-of-type(3) .icons {
+  background-color: #7158d1;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  text-align: center;
+  display: block;
+  margin: 5% auto;
+  font-size: 2em;
+  color: #fff;
+  padding: auto 0;
+  padding: 5px 0;
+}
+#Skills #skillIconBox {
   display: none;
 }
 
@@ -205,11 +261,14 @@ body {
 #Contact h2 {
   font-size: 2.5em;
   padding: 20px;
-  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 #Contact p, #Contact li, #Contact quotes {
   padding: 5px 15px;
   font-size: 1.2em;
+}
+#Contact .contact-pic {
+  display: none;
 }
 #Contact .contact-info {
   display: flex;
@@ -230,6 +289,9 @@ body {
 #Contact .contact-info .contact-details i {
   font-size: 3em;
 }
+#Contact .contact-info .contact-details a:hover, #Contact .contact-info .contact-details a:active {
+  color: #ffd300;
+}
 #Contact .contact-info .contact-details:focus, #Contact .contact-info .contact-details:active {
   background-color: rgba(255, 255, 255, 0.5);
 }
@@ -241,18 +303,10 @@ body {
   font-size: 1.9em;
 }
 
-#toTopBtn {
-  position: fixed;
-  bottom: 20%;
-  right: 5%;
-  display: none;
-  border-radius: 50%;
-  cursor: pointer;
-  z-index: 99;
-}
-
-.show {
-  display: block;
+footer {
+  font-size: 0.8em;
+  text-align: center;
+  background-color: #fff;
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
@@ -260,66 +314,379 @@ body {
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
   header {
-    font-size: 1.3em;
+    font-size: 1.4em;
+    color: #fff;
+  }
+  header .navbar-brand {
+    color: #fff;
+    font-size: 1.2em;
+  }
+  header .navbar-brand p {
+    display: inline;
+  }
+  header .navbar-brand:hover {
+    color: #fff;
+    font-weight: 600;
   }
   header .hide-lg {
     display: none;
   }
-  header #hiddenMenu {
-    margin: 0 -2% 0 5%;
-    background-color: #1daacc;
-    padding: 0 5% 0 2%;
+  header #mini-Menu {
+    margin-left: 5%;
   }
-  header #hiddenMenu li {
-    display: none;
+  header .nav-item a {
+    color: #fff;
+    vertical-align: middle;
   }
-  header #hiddenMenu p {
-    display: inline-block;
+  header .nav-item a:hover {
+    color: #ffd300;
+    -webkit-animation: hov-border 1s ease 0.1s 1 normal forwards;
+            animation: hov-border 1s ease 0.1s 1 normal forwards;
   }
-  header #hiddenMenu:hover li {
-    display: inline;
+  @-webkit-keyframes hov-border {
+    0% {
+      border-right: 3px solid;
+      border-image: linear-gradient(to bottom, #ffd300 50%, transparent 50%) 1;
+    }
+    33% {
+      border-right: 3px solid;
+      border-image: linear-gradient(to bottom, #ffd300 50%, #ffd300 50%) 1;
+      border-bottom: none;
+    }
+    66% {
+      border-right: 3px solid;
+      border-bottom: 3px double;
+      border-image: linear-gradient(to left, #ffd300 50%, transparent 50%) 1;
+    }
+    100% {
+      border-right: 3px solid;
+      border-bottom: 3px double;
+      border-image: linear-gradient(to left, #ffd300 50%, #ffd300 50%) 1;
+    }
   }
-  header #hiddenMenu:hover p {
-    display: none;
+  @keyframes hov-border {
+    0% {
+      border-right: 3px solid;
+      -o-border-image: linear-gradient(to bottom, #ffd300 50%, transparent 50%) 1;
+         border-image: linear-gradient(to bottom, #ffd300 50%, transparent 50%) 1;
+    }
+    33% {
+      border-right: 3px solid;
+      -o-border-image: linear-gradient(to bottom, #ffd300 50%, #ffd300 50%) 1;
+         border-image: linear-gradient(to bottom, #ffd300 50%, #ffd300 50%) 1;
+      border-bottom: none;
+    }
+    66% {
+      border-right: 3px solid;
+      border-bottom: 3px double;
+      -o-border-image: linear-gradient(to left, #ffd300 50%, transparent 50%) 1;
+         border-image: linear-gradient(to left, #ffd300 50%, transparent 50%) 1;
+    }
+    100% {
+      border-right: 3px solid;
+      border-bottom: 3px double;
+      -o-border-image: linear-gradient(to left, #ffd300 50%, #ffd300 50%) 1;
+         border-image: linear-gradient(to left, #ffd300 50%, #ffd300 50%) 1;
+    }
+  }
+  body {
+    background-image: none;
+    color: #000;
+    position: relative;
+  }
+  body a {
+    color: #000;
+    text-decoration: none;
+  }
+  body .navScroll {
+    background: #7158d1;
+    background-blend-mode: multiply;
   }
   #Hero {
     padding-top: 10%;
+    display: flex;
+    justify-content: flex-start;
+    background-image: url(../images/creative-flat-lay-photo-workspace-desk.jpg);
+    background-repeat: no-repeat;
+    background-position: top right;
+    background-size: cover;
+    background-blend-mode: multiply;
+    background-color: #7158d1;
   }
-  #Hero button {
-    background: #b2cd0d;
+  #Hero #heroDetails {
+    width: 50%;
     color: #000;
+    margin-left: 3%;
+  }
+  #Hero h1 {
+    font-size: 5.5em;
+    font-weight: 700;
+    color: #fff;
+    margin-top: 5%;
+  }
+  #Hero h3 {
+    font-family: monospace, "Courier New", Courier;
     font-size: 1.5em;
-    border: #b2cd0d;
-    border-radius: 50px;
-    width: 20%;
-    height: 55px;
-    margin-top: 60px;
-    box-shadow: 1px 1px 10px;
+    margin-bottom: 0;
+  }
+  #Hero a {
+    color: #fff;
+    letter-spacing: 0.3em;
+  }
+  #Hero .meetKam {
+    background: #ffd300;
+    color: #7158d1;
+    font-size: 1.2em;
+    font-weight: bold;
+    border: #FA6672;
+    border-radius: 15px;
+    width: 25%;
+    height: 45px;
+    margin: 3% 0 10% 0;
+    box-shadow: 1px 1px 5px rgb(105, 104, 104);
   }
   #About {
     padding-top: 10%;
+    display: grid;
+    padding: auto;
+    padding-bottom: 5%;
+    justify-content: center;
+    grid-template-columns: 30% 50%;
+    position: relative;
+  }
+  #About .grey-bg {
+    width: 100%;
+    height: 245px;
+    background-color: #7158d1;
+    background-position: right-top;
+    background-attachment: fixed;
+    background-blend-mode: multiply;
+    position: absolute;
+    top: 0%;
+    right: 0%;
+  }
+  #About img {
+    grid-column: 1/3;
+    grid-auto-columns: 30%;
+    justify-self: center;
+    margin-bottom: 5%;
+    z-index: 1;
+    outline: 10px solid white;
+  }
+  #About h2 {
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+    font-size: 3.5em;
+    grid-column: 1/2;
+    grid-row: 2/5;
+    text-align: right;
+    padding-right: 0%;
   }
   #About p {
-    padding: 0 10%;
+    text-align: justify;
+    padding-left: 25px;
+  }
+  #About p:nth-of-type(1) {
+    grid-column: 2/3;
+    grid-row: 2/3;
+  }
+  #About p:nth-of-type(2) {
+    grid-column: 2/3;
+    grid-row: 3/4;
+  }
+  #About p:nth-of-type(3) {
+    grid-column: 2/3;
+    grid-row: 4/5;
+  }
+  #About hr {
+    grid-column: 1/3;
+    width: 100%;
+    justify-self: center;
+    border: 2px solid #D0C8ED;
+  }
+  #About .interests {
+    grid-column: 1/3;
+    justify-self: center h4;
+    justify-self-font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  }
+  #About h2::before, #About p::before, #About .interests::before {
+    opacity: 0;
   }
   #Projects {
     padding-top: 10%;
+    position: relative;
+    overflow: hidden;
+  }
+  #Projects .blob {
+    position: absolute;
+    top: -200px;
+    left: -200px;
+    z-index: 0.9;
+    width: 50%;
+    background-blend-mode: multiply;
+  }
+  #Projects .blob:nth-of-type(2) {
+    top: 60%;
+    left: 60%;
+    transform: rotate(180deg);
+  }
+  #Projects h2 {
+    width: 100%;
+    z-index: 10;
+  }
+  #Projects #projectBox {
+    display: flex;
+    flex-flow: row nowrap;
+    overflow-x: auto;
+    background-color: transparent;
+    box-shadow: 2px 2px 10px 1px;
+    width: 70%;
+    margin: auto;
+    height: 70vh;
+    -ms-scroll-snap-type: x mandatory;
+        scroll-snap-type: x mandatory;
+    scrollbar-width: 2px;
+    scrollbar-color: #ffd300;
+  }
+  #Projects #projectBox .myCard {
+    flex: 0 0 100%;
+    margin: 0;
+    height: inherit;
+    border-radius: 0px;
+    scroll-snap-align: start;
+    box-shadow: none;
+    position: relative;
+  }
+  #Projects #projectBox .myCard .work-img {
+    height: inherit;
+    border-radius: 0px;
+  }
+  #Projects #projectBox .myCard .more {
+    background: url(../images/svg/blob.svg) repeat-y top;
+    background-size: cover;
+    border: none;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 3%;
+    left: 3%;
+    font-size: 1.5em;
+    z-index: 99;
+  }
+  #Projects #projectBox .myCard .closeMore {
+    display: none;
+  }
+  #Projects #projectBox .myCard .work-body {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: inherit;
+    background: #fff;
+    color: #000;
+    padding: 5% 20%;
   }
   #Skills {
     padding-top: 10%;
+    background-color: transparent;
+    padding-bottom: 0%;
+    margin-bottom: 0;
   }
   #Skills #skillsBox {
     display: flex;
     justify-content: center;
     align-content: flex-start;
+    padding: 2% 0;
   }
   #Skills #skillsBox .skillCard {
-    border-radius: 25px;
-    margin: 0;
-    width: 30%;
+    border-radius: 0 0 25px 25px;
+    margin: 5% 2% 0 2%;
+    width: 25%;
+    padding: 0 0 2% 0;
+  }
+  #Skills #skillIconBox {
+    margin: 10% 0 -2% 0;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    background: transparent;
+  }
+  #Skills #skillIconBox ul {
+    margin-bottom: -2%;
+  }
+  #Skills #skillIconBox ul li {
+    list-style: none;
+    display: inline-block;
+    font-size: 4em;
+    width: 107px;
+    height: 107px;
+    border-radius: 50%;
+    background-color: #eae9f9;
+    outline: 3px solid #fff;
+    margin: 0 10px;
+    color: #7158d1;
+    z-index: 99;
+    position: relative;
+  }
+  #Skills #skillIconBox ul li i {
+    text-align: center;
+    vertical-align: center;
+  }
+  #Skills #skillIconBox ul li .overlay {
+    font-size: 0.2em !important;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+  }
+  #Skills #skillIconBox ul li:hover .overlay {
+    opacity: 1;
+  }
+  #Skills #skillIconBox .greyBox {
+    width: 100%;
+    height: 100px;
+    background-color: #eae9f9;
+    background-position: right-top;
+    background-attachment: fixed;
+    position: absolute;
+    bottom: 0%;
+    right: 0%;
+    z-index: -1;
   }
   #Contact {
     padding-top: 10%;
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 10%;
+  }
+  #Contact h2 {
+    grid-column: 1/3;
+    width: 100%;
+  }
+  #Contact .contact-pic {
+    width: 50%;
+    grid-column: 2/3;
+    grid-row: 2/span 3;
+    display: inline-block;
+    margin: 5% 0 0 3%;
+  }
+  #Contact .contact-pic img {
+    width: 100%;
+  }
+  #Contact .contact-info {
+    grid-row: 2/span 3;
+    grid-column: 1/2;
+    display: grid;
+    width: 40%;
+    margin-top: 12%;
+  }
+  #Contact .contact-info .contact-details {
+    margin: 2%;
+    padding: 0%;
+    background-color: transparent;
   }
 }
 /* Extra large devices (large laptops and desktops, 1200px and up) *//*# sourceMappingURL=style.css.map */

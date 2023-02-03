@@ -25,7 +25,7 @@ $p-size : 1.2em;
     h2 {
         font-size: $h2-size;
         padding: 20px;
-        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     }
     p, li, quotes {
         padding: 5px 15px;
@@ -34,26 +34,45 @@ $p-size : 1.2em;
 }
 
 body {
-    // background-color: $Yellow;
     background-image: url(../images/SVG/Clarence.svg);
     background-repeat: no-repeat;
     background-position: right-top;
     background-attachment: fixed;
-    max-width: 100vw;    
-}
+    max-width: 100vw;   
+    height: 100%; 
 
-#hiddenMenu {
-    p {
+    #scrollTopBtn {
+        position: fixed;
+        bottom: 2%;
+        right: 2%;
+        border-radius: 50%;
         display: none;
+        cursor: pointer;
+        z-index: 99;
+        background-color: $Purple;
+        height: 40px;
+        width: 40px;
+        font-size: 1em;
     }
+
+    #hiddenMenu {
+        p {
+            display: none;
+        }
+    }
+    
+    
+    .navScroll {
+        // background-color: $LightGrey;
+        background-image: url(../images/SVG/Clarence.svg);
+        background-repeat: no-repeat;
+        background-position: right-top;
+        background-attachment: fixed;
+    }
+
 }
 
-.navScroll {
-    // background-color: $LightGrey;
-    background-image: url(../images/SVG/Clarence.svg);
-    background-repeat: no-repeat;
-    background-position: right-top;
-}
+
 
 #main-container {
     position: relative;
@@ -96,13 +115,13 @@ body {
     h3 {
         font-size: 2em;
         padding: 30px 5px;
+        font-family: 'Acme', sans-serif;
     }
 
     button {
         background: $AnotherPink;
         color: #000;
         font-size: 1.5em;
-        border: $Yellow;
         border-radius: 50px;
         width: 50%;
         height: 55px;
@@ -117,11 +136,11 @@ body {
     
     a {
         text-decoration: none;
-        color: rgb(176, 14, 14);
+        color: rgb(226, 15, 15);
     }
 
     a:hover {
-        color: #faebd7;
+        color: rgb(126, 6, 6);
 
     }
 }
@@ -163,56 +182,74 @@ body {
 
 #Skills {
     @include section-style($White);
-    position: relative;
 
     .skillCard {
-        background-color: rgba(0, 0, 0, 0.1);
-        border-radius: 25px;
+        background-color: transparent;
+        border-radius: 0 0 25px 25px;
         margin: 15% 5%;
         padding: 0 0% 10% 0%;
-        box-shadow: 2px 2px 15px;
+        box-shadow: 2px 2px 10px 1px;
 
         h5 {
             padding: 5% 0;
             font-size: 1.5em;
-            border-radius: 25px 25px 0 0;
-            background-color: $Green;
         }
 
-        li {
-            list-style: none;
+        p {
+            font-size: 1em;
         }
 
     }
 
-    #watermarkbox {
-        display: none;
-        // position: absolute;
-        // bottom: 10%;
-        // margin-bottom:100%;
-        // margin-left: 0%;
+    @mixin icon-style($i-bg) {
+        background-color: $i-bg;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        text-align: center;
+        display: block;
+        margin: 5% auto;
+        font-size: 2em;
+        color: $White;
+        padding: auto 0;
+    }
 
-        // .watermark {
-        //     font-size: 7em;
-        //     opacity: 0.1;
-        //     writing-mode: vertical-rl;
-        //     text-orientation: sideways-right;
-        //     transform: rotate(180deg);
-            
-        // }
-        // .watermark2 {
-        //     position: absolute;
-        //     font-size: 7em;
-        //     opacity: 0.1;
-        //     writing-mode: vertical-rl;
-        //     text-orientation: sideways-right;
-        //     transform: rotate(180deg);
-        // }
+    .skillCard:nth-of-type(1) {
+        border-top: 15px solid $Pink;
+
+        .icons {
+            @include icon-style($Pink);
+        }
+    }
+
+    .skillCard:nth-of-type(2) {
+        border-top: 15px solid $BlueGreen;
+
+        .icons {
+            @include icon-style($BlueGreen);
+        }
+    }
+
+    .skillCard:nth-of-type(3) {
+        border-top: 15px solid $Purple;
+
+        .icons {
+            @include icon-style($Purple);
+            padding: 5px 0;
+        }
+    }
+
+    #skillIconBox {
+        display: none;
     }
 }
 
 #Contact {
     @include section-style($LightGrey);
+
+    .contact-pic {
+        display: none;
+    }
 
     .contact-info{
         display: flex;
@@ -235,6 +272,10 @@ body {
             i {
                 font-size: 3em;
             }
+
+            a:hover, a:active {
+                color: $Yellow;
+            }
         }
 
         .contact-details:focus, .contact-details:active {
@@ -253,19 +294,14 @@ body {
     
 }
 
-#toTopBtn {
-    position: fixed;
-    bottom: 20%;
-    right: 5%;
-    display: none;
-    border-radius: 50%;
-    cursor: pointer;
-    z-index: 99;
+footer {
+    font-size: 0.8em;
+    text-align: center;
+    background-color: $White;
 }
 
-.show {
-    display: block;
-}
+
+
 
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
@@ -277,89 +313,431 @@ body {
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
     header {
-        font-size: 1.3em;
+        font-size: 1.4em;
+        color: $White;
+
+        .navbar-brand {
+            color: $White;
+            font-size: 1.2em;
+
+            p{
+                display: inline;
+            }
+        }
+
+        .navbar-brand:hover {
+            color: $White;
+            font-weight: 600;
+        }
+
         .hide-lg {
             display: none;
         }
 
-        #hiddenMenu {
-            margin: 0 -2% 0 5% ;
-            background-color: $BlueGreen;
-            padding: 0 5% 0 2%;
-            li {
-                display: none;
-            }
+        // ul {
+        //     margin-top: 2%;
+        // }
 
-            p {
-                display: inline-block;
-            }
+        #mini-Menu {
+            margin-left: 5%;
         }
 
-        #hiddenMenu:hover {
-            li {
-                display: inline;
+        .nav-item {
+            a {
+                color: $White ; 
+                vertical-align: middle;
+            }  
+            
+            a:hover {
+                color: $Yellow ; 
+                animation: hov-border 1s ease 0.1s 1 normal forwards;
             }
 
-            p {
-                display: none;
+            @keyframes hov-border {
+                0% {
+                    border-right: 3px solid;
+                    border-image: linear-gradient(to bottom, $Yellow 50%, transparent 50%) 1;
+                }
+                33% {
+                    border-right: 3px solid;
+                    border-image: linear-gradient(to bottom, $Yellow 50%, $Yellow 50%) 1;
+                    border-bottom: none;
+                }
+                66% {
+                    border-right: 3px solid; 
+                    border-bottom: 3px double;
+                    border-image: linear-gradient(to left, $Yellow 50%, transparent 50%) 1;
+                }
+                100% {
+                    border-right: 3px solid;
+                    border-bottom: 3px double;
+                    border-image: linear-gradient(to left, $Yellow 50%, $Yellow 50%) 1; 
+                }
             }
         }
     }
 
+    // Declare variables
     $section-padding-lg: 10%;
 
     @mixin lg-section-style {
         padding-top: $section-padding-lg;
     }
 
+    
+    body {
+        background-image:none;
+        color: #000;
+        position: relative;
+
+        a{
+            color: #000;
+            text-decoration: none;
+        }
+
+        .navScroll {
+            background: #7158d1;
+            background-blend-mode: multiply;
+        }    
+    }
+
 
     #Hero {
         @include lg-section-style();
+        display: flex;
+        justify-content: flex-start;
+        background-image: url(../images/creative-flat-lay-photo-workspace-desk.jpg);
+        background-repeat: no-repeat;
+        background-position: top right;
+        background-size: cover;
+        background-blend-mode: multiply;
+        background-color: $Purple;
 
-        button {
-            background: $Lime;
+        #heroDetails {
+            width: 50%;
             color: #000;
+            margin-left: 3%;
+        }
+
+        h1 {
+            font-size: 5.5em;
+            font-weight: 700;
+            color: $White;
+            margin-top: 5%;
+        }
+
+        h3{
+            font-family: monospace, 'Courier New', Courier ;
             font-size: 1.5em;
-            border: $Lime;
-            border-radius: 50px;
-            width: 20%;
-            height: 55px;
-            margin-top: 60px;
-            box-shadow: 1px 1px 10px; 
+            margin-bottom: 0;
+        }
+
+            
+        a { 
+            color: $White;
+            letter-spacing: 0.3em;
+        }
+
+        .meetKam {
+            background: $Yellow;
+            color: $Purple;
+            font-size: 1.2em;
+            font-weight: bold;
+            border: $Pink;
+            border-radius: 15px;
+            width: 25%;
+            height: 45px;
+            margin: 3% 0 10% 0;
+            box-shadow: 1px 1px 5px rgb(105, 104, 104); 
         }
     }
 
     #About{
         @include lg-section-style();
+        display: grid;
+        padding: auto;
+        padding-bottom: 5%;
+        justify-content: center;
+        grid-template-columns: 30% 50%;
+        position: relative;
+        
+
+        .grey-bg {
+            // grid-column: 1/3;
+            width: 100%;
+            height: 245px;
+            background-color: $Purple;
+            background-position: right-top;
+            background-attachment: fixed;
+            background-blend-mode: multiply;
+            position: absolute;
+            top: 0%;
+            right: 0%;
+        }
+
+        img {
+            grid-column: 1/3;
+            grid-auto-columns: 30%;
+            justify-self: center;
+            margin-bottom: 5%;
+            z-index: 1;
+            outline: 10px solid white;
+        }
+
+        h2 {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 3.5em;
+            grid-column: 1/2;
+            grid-row: 2/5;
+            text-align: right;
+            padding-right: 0%;
+        }
 
         p {
-            padding: 0 10%;
+            text-align: justify;
+            padding-left: 25px;
+        }
+
+        p:nth-of-type(1) {
+            grid-column: 2/3;
+            grid-row: 2/3;
+        }
+
+        p:nth-of-type(2) {
+            grid-column: 2/3;
+            grid-row: 3/4;
+        }
+
+        p:nth-of-type(3) {
+            grid-column: 2/3;
+            grid-row: 4/5;
+        }
+
+        hr {
+            grid-column: 1/3;
+            width: 100%;
+            justify-self: center;
+            border: 2px solid $Light-Lavender;
+        }
+
+        .interests {
+            grid-column: 1/3;
+            justify-self: center
+
+            h4 {
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            }
+        }
+
+        h2::before, p::before, .interests::before {
+            opacity: 0;
         }
     } 
     
     #Projects{
         @include lg-section-style();
+        position: relative;
+        overflow: hidden;
+
+        .blob {
+            position: absolute;
+            top: -200px;
+            left: -200px;
+            z-index: 0.9;
+            width: 50%;
+            background-blend-mode: multiply;
+        }
+
+        .blob:nth-of-type(2) {
+            top: 60%;
+            left: 60%;
+            transform: rotate(180deg);
+        }
+
+        h2 {
+            width: 100%;
+            z-index: 10;
+        }   
+
+        #projectBox{
+            display: flex;
+            flex-flow: row nowrap;
+            overflow-x: auto;
+            background-color: transparent;
+            box-shadow: 2px 2px 10px 1px;
+            width: 70%;
+            margin: auto;
+            height: 70vh;
+            scroll-snap-type: x mandatory;
+            scrollbar-width: 2px;
+            scrollbar-color: $Yellow;
+
+            .myCard {
+                flex: 0 0 100%;
+                margin: 0;
+                height: inherit;
+                border-radius: 0px;
+                scroll-snap-align: start;
+                box-shadow: none;
+                position: relative;
+    
+                .work-img {
+                    height: inherit;
+                    border-radius: 0px;
+                }
+
+                .more {
+                    background: url(../images/svg/blob.svg) repeat-y top;
+                    background-size: cover;
+                    border: none;
+                    border-radius: 50%;
+                    position: absolute;
+                    bottom: 3%;
+                    left: 3%;
+                    font-size: 1.5em;
+                    z-index: 99;
+                }
+
+                .closeMore {
+                    display: none;
+                }
+    
+                .work-body {
+                    display: none;
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    width: 100%;
+                    height: inherit;
+                    background: $White;
+                    color: #000;
+                    padding: 5% 20%;
+                }
+            }
+        }     
     } 
     
     #Skills{
         @include lg-section-style();
+        background-color: transparent;
+        padding-bottom: 0%;
+        margin-bottom: 0;
 
         #skillsBox {
             display: flex;
             justify-content: center;
             align-content: flex-start;
+            padding: 2% 0;
 
             .skillCard {
-                border-radius: 25px;
-                margin: 0;
-                width: 30%;
+                border-radius: 0 0  25px 25px;
+                margin: 5% 2% 0 2%;
+                width: 25%;
+                padding: 0 0 2% 0;
             }
         } 
+
+        #skillIconBox {
+            margin: 10% 0 -2% 0;
+            display: flex;
+            justify-content: center;
+            position: relative; 
+            background: transparent;
+
+            ul {
+                margin-bottom: -2%;
+
+                li {
+                    list-style: none;
+                    display: inline-block;
+                    font-size: 4em;
+                    width: 107px;
+                    height: 107px;
+                    border-radius: 50%;
+                    background-color: $LightGrey;
+                    outline: 3px solid $White;
+                    margin: 0 10px;
+                    color: $Purple;
+                    z-index: 99;
+                    position: relative;
+        
+                    i {
+                        text-align: center;
+                        vertical-align: center;
+                    }
+
+                    .overlay {
+                        // display: none;
+                        font-size: 0.2em !important;
+                        position: absolute;
+                        top: 0;
+                        bottom: 0;
+                        left: 0;
+                        right: 0;
+                        height: 100%;
+                        width: 100%;
+                        opacity: 0;
+                    }
+                }
+
+                li:hover {
+                    .overlay {
+                        opacity: 1;
+                    }
+                }
+            }
+
+            .greyBox {
+                width: 100%;
+                height: 100px;
+                background-color: $LightGrey;
+                background-position: right-top;
+                background-attachment: fixed;
+                position: absolute;
+                bottom: 0%;
+                right: 0%;
+                z-index: -1;
+            }
+        }
 
     }
     
     #Contact{
         @include lg-section-style();
+        display: flex;
+        flex-wrap: wrap;
+        padding-bottom: 10%;
+
+        h2 {
+            grid-column: 1/3;
+            width: 100%;
+        }
+
+        .contact-pic {
+            width:50%;
+            grid-column: 2/3;
+            grid-row: 2 / span 3;
+            display: inline-block;
+            margin: 5% 0 0 3%;
+            img {
+                width: 100%;
+            }
+        }
+
+        .contact-info {
+            grid-row: 2/ span 3;
+            grid-column: 1/2;
+            display: grid;
+            width: 40%;
+            margin-top: 12%;
+
+            .contact-details {
+                margin: 2%;
+                padding: 0%;
+                background-color: transparent;
+            }
+        }
+
     }
 
     
