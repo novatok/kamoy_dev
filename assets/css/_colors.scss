@@ -5,11 +5,17 @@ $White : #fff; //used
 $LightGrey: #eae9f9; //used 
 $Purple : #7158d1 ; //used 
 $Light-Lavender : #D0C8ED; //used
-$Gradient: linear-gradient(90deg, #f8ff00 0%, #3ad59f 100%);
+$Gradient: -webkit-linear-gradient(90deg, #78ffd6, #007991);
+$GradientReversed: -webkit-linear-gradient(90deg, #007991, #78ffd6);
 $Yellow: #ffd300 ;
 $Peach: #fe9572;
 $AnotherPink : #f75f68;
 $Green: #32DBA2;
+$OtherGreen : #007991;
 $Lime: #b2cd0d;
 $Lavender: #B096E0;
+$Text-color-sec : rgb(17, 12, 19);
+
+// #3ad59f - Other green from gradient
+// #f8ff00 - Other Yellow from gradient
 

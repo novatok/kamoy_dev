@@ -28,9 +28,9 @@ function backToTop() {
 
 
 
-/*Change color of Nav Bar*/
+/*Change color of Nav Bar as user scrolls*/
 function navScroll() {
-    if (document.body.scrollTop > 980 || document.documentElement.scrollTop > 980) {
+    if (document.body.scrollTop > 10 || document.documentElement.scrollTop > 10) {
         document.getElementById("menubar").classList.add("navScroll");
     }
     else{
@@ -55,21 +55,6 @@ function changeText() {
 changeText();
 setInterval(changeText, 10000);
 
-/*Flip skills icons on mouse over */
-// const skillIcons = document.getElementsByClassName("skillIcons");
-// console.log(skillIcons);
-// for (const icon of skillIcons) {
-//     icon.addEventListener("mouseover", function onmouseover(){
-//         icon.classList.add("wow animate__bounceIn");
-//         icon.style.display = "#none";
-//     });
-// }
-
-// function flip() {
-//     skillIcons.classList.add("wow animate__bounceIn");
-//     skillIcons.style.display = "#none";
-// }
-
 
 // Show or hide Project Details
 let card_Details = document.getElementsByClassName("work-body");
@@ -83,10 +68,20 @@ function showDetails(cardIndex) {
     card_Details[cardIndex].style.display = "block";
     document.getElementsByClassName("showMore")[cardIndex].style.display = "none";
     document.getElementsByClassName("closeMore")[cardIndex].style.display = "block";
+    //Hide title only if screen is larger than 992px
+    var x = window.matchMedia("(min-width: 992px)");
+    if(x.matches){
+        document.getElementsByClassName("work-title")[cardIndex].style.display = "none";
+    }
+    else {
+        document.getElementsByClassName("work-title")[cardIndex].style.display = "block";
+    }
+    
 }
 
 function hideDetails(cardIndex) {
     card_Details[cardIndex].style.display = "none";
     document.getElementsByClassName("showMore")[cardIndex].style.display = "block";
     document.getElementsByClassName("closeMore")[cardIndex].style.display = "none";
+    document.getElementsByClassName("work-title")[cardIndex].style.display = "block";
 }

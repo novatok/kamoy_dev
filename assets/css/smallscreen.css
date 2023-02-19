@@ -1,0 +1,409 @@
+@import url("https://fonts.googleapis.com/css2?family=Acme&family=Cormorant+SC:wght@400;700&family=Noto+Sans&display=swap"); /* Color Theme Swatches in Hex */
+body, html, * {
+  margin: 0;
+  padding: 0%;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  box-sizing: border-box;
+}
+
+body {
+  max-width: 100vw;
+  height: 100%;
+  text-align: center;
+}
+body ::-moz-selection {
+  background: #7158d1;
+}
+body ::selection {
+  background: #7158d1;
+}
+body #scrollTopBtn {
+  position: fixed;
+  bottom: 2%;
+  right: 2%;
+  border-radius: 50%;
+  display: none;
+  cursor: pointer;
+  z-index: 99;
+  background-color: #7158d1;
+  height: 45px;
+  width: 45px;
+  font-size: 1em;
+}
+body .navScroll {
+  background: #7158d1;
+  background-blend-mode: multiply;
+}
+
+header {
+  font-size: 1.4em;
+}
+header .navbar-brand {
+  font-size: 1.2em;
+}
+header .navbar-brand * {
+  color: aliceblue;
+}
+header .navbar-brand p {
+  display: inline;
+}
+header button .fa-bars {
+  color: aliceblue;
+}
+header .navbar-brand:hover {
+  font-weight: 600;
+}
+header .offcanvas {
+  background-color: #7158d1;
+  color: aliceblue;
+  text-align: left;
+}
+header .nav-link {
+  color: aliceblue;
+}
+
+#Hero {
+  min-height: 100vh;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding-top: 15%;
+  padding-bottom: 15%;
+  background-color: #7158d1;
+  background-attachment: fixed;
+  background-image: url(../images/creative-flat-lay-photo-workspace-desk.jpg);
+  background-repeat: no-repeat;
+  background-position: top right;
+  background-size: cover;
+  background-blend-mode: multiply;
+  text-align: center;
+  color: aliceblue;
+  padding-top: 35%;
+}
+#Hero h2 {
+  font-size: 2.5em;
+  padding: 20px;
+  margin-bottom: 10%;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+#Hero p, #Hero li, #Hero quotes {
+  padding: 5px 15px;
+  font-size: 1.2em;
+}
+#Hero ::-moz-selection {
+  background: #fff;
+  color: #7158d1;
+}
+#Hero ::selection {
+  background: #fff;
+  color: #7158d1;
+}
+#Hero h1 {
+  font-size: 4.5em;
+  font-family: "Acme", sans-serif;
+  font-weight: 700;
+}
+#Hero h3 {
+  font-size: 2em;
+  padding: 30px 5px;
+  font-family: "Acme", sans-serif;
+}
+#Hero button {
+  background: white;
+  color: #7158d1;
+  font-size: 1.3em;
+  border-radius: 15px;
+  border: none;
+  width: 50%;
+  height: 55px;
+  padding: 0 2%;
+  margin-top: 57px;
+  box-shadow: 1px 1px 5px;
+}
+#Hero button:hover {
+  box-shadow: 2px 2px 7px;
+  animation: border-anim 0.5s ease-in forwards;
+}
+@keyframes border-anim {
+  0% {
+    outline: 1px solid #f75f68;
+    outline-offset: 1.5px;
+    border: 1px solid #fe9572;
+    color: #fe9572;
+  }
+  50% {
+    outline: 1px solid #f75f68;
+    outline-offset: 3px;
+    border: 2px solid #fe9572;
+    color: #FA6672;
+  }
+  100% {
+    outline: 1px solid #f75f68;
+    outline-offset: 5px;
+    border: 3px solid #fe9572;
+    color: #f75f68;
+  }
+}
+
+#About {
+  min-height: 100vh;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding-top: 15%;
+  padding-bottom: 15%;
+  background-color: transparent;
+  background-attachment: fixed;
+  position: relative;
+}
+#About h2 {
+  font-size: 2.5em;
+  padding: 20px;
+  margin-bottom: 10%;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+#About p, #About li, #About quotes {
+  padding: 5px 15px;
+  font-size: 1.2em;
+}
+#About .box-bg {
+  width: 100%;
+  height: 85px;
+  background-color: #7158d1;
+  background-blend-mode: multiply;
+  position: absolute;
+  top: 0%;
+  right: 0%;
+  z-index: -1;
+}
+#About img {
+  margin: -8% auto 5% auto;
+  z-index: 1;
+  outline: 10px solid white;
+}
+#About a {
+  text-decoration: none;
+  color: #f75f68;
+}
+#About a:hover {
+  color: #fe9572;
+}
+
+#Projects {
+  min-height: 100vh;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding-top: 15%;
+  padding-bottom: 15%;
+  background-color: #eae9f9;
+  background-attachment: fixed;
+}
+#Projects h2 {
+  font-size: 2.5em;
+  padding: 20px;
+  margin-bottom: 10%;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+#Projects p, #Projects li, #Projects quotes {
+  padding: 5px 15px;
+  font-size: 1.2em;
+}
+#Projects .myCard {
+  background-color: #fff;
+  border-radius: 25px;
+  margin: 5%;
+  padding: 0 0% 10% 0%;
+  box-shadow: 2px 2px 15px;
+  text-align: center;
+}
+#Projects .myCard .work-img {
+  border-radius: 25px 25px 0 0;
+}
+#Projects .myCard .work-title {
+  padding-top: 10%;
+  font-size: 1.5em;
+  font-weight: 500;
+}
+#Projects .myCard .btn {
+  background-color: #B096E0;
+  border: #B096E0;
+  color: #000;
+  font-size: 1em;
+  font-weight: bold;
+  border-radius: 25px;
+  width: 80%;
+  height: 40px;
+  margin-top: 10%;
+}
+#Projects .myCard .btn:hover {
+  opacity: 0.8;
+}
+#Projects .myCard .more {
+  border: none;
+  font-size: 1.5em;
+  background-color: #fff;
+  display: block;
+  margin: auto;
+}
+#Projects .myCard .closeMore {
+  display: none;
+}
+#Projects .myCard .work-body {
+  display: none;
+  width: 100%;
+  height: inherit;
+  background: #fff;
+  color: #000;
+  padding: 5% 2%;
+}
+
+#Skills {
+  min-height: 100vh;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding-top: 15%;
+  padding-bottom: 15%;
+  background-color: #fff;
+  background-attachment: fixed;
+}
+#Skills h2 {
+  font-size: 2.5em;
+  padding: 20px;
+  margin-bottom: 10%;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+#Skills p, #Skills li, #Skills quotes {
+  padding: 5px 15px;
+  font-size: 1.2em;
+}
+#Skills .skillCard {
+  background-color: transparent;
+  border-radius: 0 0 25px 25px;
+  margin: 15% 5%;
+  padding: 0 0% 10% 0%;
+  box-shadow: 2px 2px 10px 1px;
+}
+#Skills .skillCard h5 {
+  padding: 5% 0;
+  font-size: 1.5em;
+}
+#Skills .skillCard p {
+  font-size: 1em;
+}
+#Skills .skillCard:nth-of-type(1) {
+  border-top: 15px solid #FA6672;
+}
+#Skills .skillCard:nth-of-type(1) .icons {
+  background-color: #FA6672;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  text-align: center;
+  display: block;
+  margin: 5% auto;
+  font-size: 2em;
+  color: #fff;
+  padding: auto 0;
+}
+#Skills .skillCard:nth-of-type(2) {
+  border-top: 15px solid #1daacc;
+}
+#Skills .skillCard:nth-of-type(2) .icons {
+  background-color: #1daacc;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  text-align: center;
+  display: block;
+  margin: 5% auto;
+  font-size: 2em;
+  color: #fff;
+  padding: auto 0;
+}
+#Skills .skillCard:nth-of-type(3) {
+  border-top: 15px solid #7158d1;
+}
+#Skills .skillCard:nth-of-type(3) .icons {
+  background-color: #7158d1;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  text-align: center;
+  display: block;
+  margin: 5% auto;
+  font-size: 2em;
+  color: #fff;
+  padding: auto 0;
+  padding: 5px 0;
+}
+#Skills #skillIconBox {
+  display: none;
+}
+
+#Contact {
+  min-height: 100vh;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding-top: 15%;
+  padding-bottom: 15%;
+  background-color: #eae9f9;
+  background-attachment: fixed;
+}
+#Contact h2 {
+  font-size: 2.5em;
+  padding: 20px;
+  margin-bottom: 10%;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+#Contact p, #Contact li, #Contact quotes {
+  padding: 5px 15px;
+  font-size: 1.2em;
+}
+#Contact img {
+  width: 100%;
+}
+#Contact .contact-info {
+  display: flex;
+  flex-wrap: wrap;
+}
+#Contact .contact-info .contact-details {
+  background-color: rgba(255, 255, 255, 0.08);
+  width: 100%;
+  height: 100%;
+  margin-top: 5%;
+  padding: 5% 0;
+}
+#Contact .contact-info .contact-details a {
+  text-decoration: none;
+  color: #000;
+}
+#Contact .contact-info .contact-details i {
+  font-size: 3em;
+  background: -webkit-linear-gradient(90deg, #78ffd6, #007991);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+#Contact .contact-info .contact-details a:hover, #Contact .contact-info .contact-details a:active {
+  color: #007991;
+}
+#Contact .contact-info .contact-details a:hover i, #Contact .contact-info .contact-details a:active i {
+  background: -webkit-linear-gradient(90deg, #007991, #78ffd6);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+#Contact .contact-info .contact-details:focus, #Contact .contact-info .contact-details:active {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+#Contact .contact-info .social {
+  display: flex;
+  justify-content: center;
+}
+#Contact .contact-info .social i {
+  font-size: 1.9em;
+}
+
+footer {
+  padding: 3%;
+}/*# sourceMappingURL=smallScreen.css.map */

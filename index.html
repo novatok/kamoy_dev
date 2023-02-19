@@ -8,7 +8,8 @@
     <link rel="icon" type="image/x-icon" href="./assets/images/Logo.png">
     <link rel="stylesheet" href="./assets/css/bootstrap.css">
     <link rel="stylesheet" href="./assets/css/animate.min.css">
-    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/smallscreen.css">
+    <link rel="stylesheet" href="./assets/css/widescreen.css" media="screen and (min-width: 992px)">
 </head>
 <body>
     <header>
@@ -63,9 +64,9 @@
     
     <main id="main-container" >
 
-        <aside>
+        <!-- <aside>
             <img src="./assets/images/pic1.jpg" alt="pic1" class="img-fluid">
-        </aside>
+        </aside> -->
 
         <div id="sub-container">
 
@@ -73,35 +74,32 @@
                 <div id="heroDetails">
                     <!-- <h3>
                         &#60Hello&#62 &nbsp; 
-                        <span class="Ibuild"><i class="fa fa-ellipsis-h" aria-hidden="true"></i> </span> 
+                        <span class="Ibuild"><i class="fa fa-ellipsis-h" aria-hidden="false"></i> </span> 
                         &nbsp; &#60/Hello&#62
                     </h3> -->
                     <h1>Interactive Web Experiences</h1>
-                    <h3>by <span id="heroAnim"> the Enthusiast</span></h3>
-                    <a href="#About"><button class="meetKam">Meet Kamoy <i class="fa fa-chevron-right" aria-hidden="true"></i></button></a>
+                    <h3>by <span id="heroAnim"></span></h3>
+                    <a href="#About"><button class="meetKam">Meet Kamoy <i class="fa fa-chevron-right" aria-hidden="false"></i></button></a>
                 </div>
-                <!-- <div id="heroImage">
-                    <a href="https://www.freepik.com/free-photo/creative-flat-lay-photo-workspace-desk_3520026.htm#query=workspace&position=47&from_view=search&track=sph">Image by tirachardz</a> on Freepik
-                </div> -->
             </section>
 
             <section id="About">
-                <div class="grey-bg">  </div>
+                <div class="box-bg">  </div>
                 <img src="./assets/images/pic4.jpg" alt="Logo" height="200px" width="200px" class="rounded-pill">
-                <h2 class="wow animate__fadeInLeft" data-wow-duration="2s" data-wow-delay="0s" aria-hidden="true">WHO <br> IS <br> <strong>KAMOY?</strong></h2>
-                <p class="wow animate__fadeInRight" data-wow-duration="2s" data-wow-delay="0s" aria-hidden="true">
+                <h2 class="wow animate__fadeInLeft" data-wow-duration="2s" data-wow-delay="0s" aria-hidden="false">WHO <br> IS <br> <strong>KAMOY?</strong></h2>
+                <p class="wow animate__fadeInRight" data-wow-duration="2s" data-wow-delay="0s" aria-hidden="false">
                     <i class="fa-solid fa-earth-americas"></i> &nbsp; Web developer based in Kingston, Jamaica
                 </p>
-                <p class="wow animate__fadeInRight" data-wow-duration="2s" data-wow-delay="0s" aria-hidden="true">
+                <p class="wow animate__fadeInRight" data-wow-duration="2s" data-wow-delay="0s" aria-hidden="false">
                     <i class="fa-solid fa-graduation-cap"></i> &nbsp; Current student pursuing BSc in Information Technology at the University of the Commonwealth Caribbean (UCC)
                 </p>
-                <p class="wow animate__fadeInRight" data-wow-duration="2s" data-wow-delay="0s" aria-hidden="true">
+                <p class="wow animate__fadeInRight" data-wow-duration="2s" data-wow-delay="0s" aria-hidden="false">
                     <i class="fa-solid fa-check"></i> &nbsp;
                     I am a passionate designer backed by years of customer satisfaction experience. I love to code and have knowledge of frontend/backend processes and tools. See my <a href="#Skills"> technical skills</a>.
                 </p>
                 <br>
                 <hr>
-                <div class="interests wow animate__fadeInUp" data-wow-duration="3s" data-wow-delay="0s" aria-hidden="true">
+                <div class="interests wow animate__fadeInUp" data-wow-duration="3s" data-wow-delay="0s" aria-hidden="false">
                     <h4>Interests</h4>
                     <ul class="list-inline">
                         <li class="list-inline-item"><i class="fa-solid fa-brain"></i>&nbsp; Machine learning (ML)</li>
@@ -117,43 +115,33 @@
             </section>
 
             <section id="Projects">
-                <svg class="blob" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-                    <path fill="#7158D1" d="M31,-48.1C39.4,-36.6,44.8,-26.4,54.7,-13.6C64.7,-0.8,79.1,14.8,79.6,29.7C80,44.6,66.5,58.8,50.9,70C35.4,81.1,17.7,89.3,2.9,85.3C-11.9,81.4,-23.9,65.3,-37.5,53.5C-51.1,41.7,-66.5,34.1,-73.4,21.7C-80.3,9.3,-78.9,-7.9,-73,-23C-67.1,-38.1,-56.8,-51,-43.9,-61.1C-31,-71.1,-15.5,-78.2,-2.1,-75.3C11.3,-72.5,22.6,-59.6,31,-48.1Z" transform="translate(100 100)" />
-                </svg>
-                <svg class="blob" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-                    <path fill="#7158D1" d="M31,-48.1C39.4,-36.6,44.8,-26.4,54.7,-13.6C64.7,-0.8,79.1,14.8,79.6,29.7C80,44.6,66.5,58.8,50.9,70C35.4,81.1,17.7,89.3,2.9,85.3C-11.9,81.4,-23.9,65.3,-37.5,53.5C-51.1,41.7,-66.5,34.1,-73.4,21.7C-80.3,9.3,-78.9,-7.9,-73,-23C-67.1,-38.1,-56.8,-51,-43.9,-61.1C-31,-71.1,-15.5,-78.2,-2.1,-75.3C11.3,-72.5,22.6,-59.6,31,-48.1Z" transform="translate(100 100)" />
-                </svg>
                 <h2>RECENT PROJECTS</h2>
                 <div id="projectBox">
                     <div class="myCard">
                         <img class="work-img" style="width:100%" src="assets/images/huddle-lp.png" alt="huddle-lp">
 
-                        <button class="more showMore" onclick="currentDetail(0)"><i class="fa fa-ellipsis-h" aria-hidden="true"></i></button>
-                        <button class="more closeMore" onclick="hideDetails(0)"><i class="fa fa-close" aria-hidden="true"></i></button>
+                        <h4 class="work-title">Huddle Landing Page</h4>
+
+                        <button class="more showMore" data-bs-toggle="tooltip" data-bs-placement="top" title="More Info" onclick="currentDetail(0)">
+                            <i class="fa fa-ellipsis-h" aria-hidden="false"></i> 
+                        </button>
 
                         <div class="work-body">
-                            <h4 class="work-title">Huddle Landing Page</h4>
+                            <button class="more closeMore" onclick="hideDetails(0)"><i class="fa fa-close" aria-hidden="false"></i></button>
                             <p class="work-text">This is a solution to the Huddle landing page with single introductory section challenge on Frontend Mentor. <br> Built with Semantic HTML5 markup, CSS Grid & Mobile-first workflow </p> <br>
                             <a href="https://novatok.github.io/huddle-landing-page/" class="btn btn-primary" target="_blank">View Site</a>
                         </div>
                     </div>
-                    <!-- <div class="myCard">
-                        <img class="work-img" style="width:100%" src="assets/images/explore_jamaica.png" alt="explore_jamaica">
-                        <div class="work-body">
-                            <h4 class="work-title">Explore Jamaica</h4>
-                            <p class="work-text">Project or coursework for Internet Authoring. <br> Built with HTML and CSS</p> <br>
-                            <a href="https://novatok.github.io/explore_jamaica/" class="btn btn-primary" target="_blank">View Site</a>
-                        </div>
-                    </div> -->
 
                     <div class="myCard">
                         <img class="work-img " style="width:100%" src="assets/images/loginphp.png" alt="loginphp">
 
-                        <button class="more showMore" onclick="currentDetail(1)"><i class="fa fa-ellipsis-h" aria-hidden="true"></i></button>
-                        <button class="more closeMore" onclick="hideDetails(1)"><i class="fa fa-close" aria-hidden="true"></i></button>
+                        <h4 class="work-title">Login Web System</h4>
+
+                        <button class="more showMore"  data-bs-toggle="tooltip" data-bs-placement="top" title="More Info" onclick="currentDetail(1)"><i class="fa fa-ellipsis-h" aria-hidden="false"></i></button>
 
                         <div class="work-body">
-                            <h4 class="work-title">Login Web System</h4>
+                            <button class="more closeMore" onclick="hideDetails(1)"><i class="fa fa-close" aria-hidden="false"></i></button>
                             <p class="work-text">Project or coursework for Internet Authoring II. <br>Built with HTML, CSS and PHP. </p> <br>
                             <a href="https://github.com/novatok/login_webproject" class="btn btn-primary" target="_blank">View Source Code</a>
                         </div>
@@ -162,11 +150,12 @@
                     <div class="myCard">
                         <img class="work-img" style="width:100%" src="assets/images/QR-component.png" alt="QR-component">
 
-                        <button class="more showMore" onclick="currentDetail(2)"><i class="fa fa-ellipsis-h" aria-hidden="true"></i></button>
-                        <button class="more closeMore" onclick="hideDetails(2)"><i class="fa fa-close" aria-hidden="true"></i></button>
+                        <h4 class="work-title">QR-Component</h4>
+
+                        <button class="more showMore" data-bs-toggle="tooltip" data-bs-placement="top" title="More Info" onclick="currentDetail(2)"><i class="fa fa-ellipsis-h" aria-hidden="false"></i></button>
 
                         <div class="work-body">
-                            <h4 class="work-title">QR-Component</h4>
+                            <button class="more closeMore" onclick="hideDetails(2)"><i class="fa fa-close" aria-hidden="false"></i></button>
                             <p class="work-text">This is a solution to the QR code component challenge on Frontend Mentor. <br> Built with Semantic HTML5 markup, CSS & Mobile-first workflow </p> <br>
                             <a href="https://novatok.github.io/QR-Code-Component-using-HTML-CSS/" class="btn btn-primary" target="_blank">View Site</a>
                         </div>
@@ -174,11 +163,12 @@
                     <div class="myCard">
                         <img class="work-img" style="width:100%" src="assets/images/advice-generator.png" alt="advice-generator">
 
-                        <button class="more showMore" onclick="currentDetail(3)"><i class="fa fa-ellipsis-h" aria-hidden="true"></i></button>
-                        <button class="more closeMore" onclick="hideDetails(3)"><i class="fa fa-close" aria-hidden="true"></i></button>
+                        <h4 class="work-title">Advice Generator App</h4>
+
+                        <button class="more showMore" data-bs-toggle="tooltip" data-bs-placement="top" title="More Info" onclick="currentDetail(3)"><i class="fa fa-ellipsis-h" aria-hidden="false"></i></button>
 
                         <div class="work-body">
-                            <h4 class="work-title">Advice Generator App</h4>
+                            <button class="more closeMore" onclick="hideDetails(3)"><i class="fa fa-close" aria-hidden="false"></i></button>
                             <p class="work-text">This is a solution to the Advice generator app challenge on Frontend Mentor. <br> Built with Semantic HTML5 markup, CSS, Flexbox, Mobile-first workflow, Javascript & Advice Slip API </p> <br>
                             <a href="https://novatok.github.io/advice-generator-app/" class="btn btn-primary" target="_blank">View Site</a>
                         </div>
@@ -221,16 +211,16 @@
                 </div>
                 <div id="skillIconBox">
                     <ul>
-                        <li><i class="fa-brands fa-html5 skillIcons"  data-wow-duration="5s" data-wow-delay="1s" aria-hidden="true"></i> &nbsp; <p class="overlay">HTML</p> </li>
-                        <li><i class="fa-brands fa-css3 skillIcons" data-wow-duration="5s" data-wow-delay="1s" aria-hidden="true"></i> &nbsp; <p class="overlay">CSS</p> </li>
-                        <li><i class="fa-brands fa-js skillIcons" data-wow-duration="5s" data-wow-delay="1s" aria-hidden="true"></i> &nbsp; <p class="overlay">JavaScript</p> </li>
-                        <li><i class="fa-brands fa-react skillIcons" data-wow-duration="5s" data-wow-delay="1s" aria-hidden="true"></i> &nbsp; <p class="overlay">React</p> </li>
-                        <li><i class="fa-brands fa-bootstrap skillIcons" data-wow-duration="5s" data-wow-delay="1s" aria-hidden="true"></i> &nbsp; <p class="overlay">Bootstrap</p> </li>
-                        <li><i class="fa-brands fa-php skillIcons" data-wow-duration="5s" data-wow-delay="1s" aria-hidden="true"></i> &nbsp; <p class="overlay">PHP</p> </li>
-                        <li><i class="fa-brands fa-python skillIcons" data-wow-duration="5s" data-wow-delay="1s" aria-hidden="true"></i> &nbsp; <p class="overlay">Python</p> </li>
+                        <li><i class="fa-brands fa-html5 skillIcons"  data-wow-duration="5s" data-wow-delay="1s" aria-hidden="false"></i> &nbsp; <p class="overlay">HTML</p> </li>
+                        <li><i class="fa-brands fa-css3 skillIcons" data-wow-duration="5s" data-wow-delay="1s" aria-hidden="false"></i> &nbsp; <p class="overlay">CSS</p> </li>
+                        <li><i class="fa-brands fa-js skillIcons" data-wow-duration="5s" data-wow-delay="1s" aria-hidden="false"></i> &nbsp; <p class="overlay">JavaScript</p> </li>
+                        <li><i class="fa-brands fa-react skillIcons" data-wow-duration="5s" data-wow-delay="1s" aria-hidden="false"></i> &nbsp; <p class="overlay">React</p> </li>
+                        <li><i class="fa-brands fa-bootstrap skillIcons" data-wow-duration="5s" data-wow-delay="1s" aria-hidden="false"></i> &nbsp; <p class="overlay">Bootstrap</p> </li>
+                        <li><i class="fa-brands fa-php skillIcons" data-wow-duration="5s" data-wow-delay="1s" aria-hidden="false"></i> &nbsp; <p class="overlay">PHP</p> </li>
+                        <li><i class="fa-brands fa-python skillIcons" data-wow-duration="5s" data-wow-delay="1s" aria-hidden="false"></i> &nbsp; <p class="overlay">Python</p> </li>
                         <!-- <li><i class="fa-solid fa-database"></i> &nbsp; MySQL</li>                    -->
                         <!-- <li><i class="fas fa-code"></i> &nbsp; VS Code</li> -->
-                        <li><i class="fa-brands fa-square-git skillIcons" data-wow-duration="5s" data-wow-delay="1s" aria-hidden="true"></i> &nbsp; <p class="overlay">GIT</p> </li>
+                        <li><i class="fa-brands fa-square-git skillIcons" data-wow-duration="5s" data-wow-delay="1s" aria-hidden="false"></i> &nbsp; <p class="overlay">GIT</p> </li>
                         <!-- <li><i class="fas fa-image"></i> &nbsp; Photoshop</li> -->
                     </ul>
                     <div class="greyBox"></div>
@@ -245,15 +235,15 @@
                 </div>
                 <div class="contact-info">
                     <div class="contact-details">
-                        <i class="fa fa-envelope"></i>
                         <a href="mailto:kamoysaunders@yahoo.com">
+                            <i class="fa fa-envelope"></i>
                             <p>kamoysaunders@yahoo.com</p>
                         </a>
                     </div>
 
                     <div class="contact-details">
-                        <i class="fa fa-location-dot"></i>
-                        <a href="#">                        
+                        <a href="#"> 
+                            <i class="fa fa-location-dot"></i>
                             <p>Kingston, Jamaica</p>
                         </a>
                     </div>
@@ -275,7 +265,6 @@
                         </a>
                     </div>
                 </div>
-                <!-- <img src="assets/images/personal_email.svg" alt="personal_email" width="400px" >  -->
             </section>
 
         </div>
@@ -283,11 +272,11 @@
     </main>
 
     <button type="button" id="scrollTopBtn" class="btn">
-        <i class="fa fa-arrow-up fa-1x wow animate__swing" data-wow-delay="0.5s" data-wow-duration="2s" aria-hidden="true"></i>
+        <i class="fa fa-arrow-up fa-1x wow animate__swing" data-wow-delay="0.5s" data-wow-duration="2s" aria-hidden="false"></i>
     </button>
 
     <footer>
-        Copyright &COPY; 2022
+        &COPY; 2023 Kamoy Saunders | All Rights Reserved
     </footer>
 
     <script src="https://kit.fontawesome.com/7fce1ef089.js" crossorigin="anonymous"></script>
